@@ -377,7 +377,7 @@ class _Leaf<K, V> extends _Node<K, V> {
   List _kv;
   get private_kv => _kv;
 
-  get iterator {
+  Iterator<Pair<K, V>> get iterator {
     List<Pair<K, V>> pairs = [];
     for (int i=0; i<_kv.length; i+=recsize){
       pairs.add(new Pair(_kv[i+1], _kv[i+2]));
